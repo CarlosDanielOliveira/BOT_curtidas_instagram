@@ -13,13 +13,13 @@ def logout():
 while True:
     #Abrir instagram
 
-    sleep(7)
+    sleep(2)
 
     url = "https://www.instagram.com/"
     webbrowser.open(url)
 
     #informações login
-    sleep(2.5)
+    sleep(1.5)
     login = pa.prompt(text= 'Digite seu login, por favor:', title= 'Informações de Login')
     passw = pa.password(text= 'Senha: ', title= 'Informações de Login', mask='*')
 
@@ -41,19 +41,19 @@ while True:
 
     pa.moveTo(1179,462, duration=1)
     pa.leftClick()
-    sleep(4)
+    sleep(3)
 
     pa.click(1101,634, duration= 2)
 
-    sleep(4)
+    sleep(3)
 
     #pesquisar marca
 
     pa.moveTo(44,330, duration=1)
     pa.leftClick()
-    sleep(3)
-    pa.typewrite('nike')
     sleep(2)
+    pa.typewrite('nike')
+    sleep(1)
 
 
     nike = pa.locateCenterOnScreen('nike.png')
@@ -62,7 +62,7 @@ while True:
     pa.click()
 
     #verificar postagem atual 
-    sleep(3)
+    sleep(2)
     pa.scroll(-100)
     pa.click(732,564, duration=1)
 
@@ -71,10 +71,10 @@ while True:
 
     pyscreeze.USE_IMAGE_NOT_FOUND_EXCEPTION = False
     likes = pa.locateCenterOnScreen ('likes.png')
-    sleep(1.5)
+    sleep(1)
 
     if likes is not None:
-        sleep(10)
+        sleep(2)
         logout()
         
         
@@ -87,7 +87,7 @@ while True:
         pa.typewrite('Amazing!!!')
         sleep(1.5)
         pa.press('Enter')
-        sleep(10)
+        sleep(2)
         logout()
         
         
